@@ -1,0 +1,70 @@
+
+
+####### DATA CONFIG
+checkpoint_path: checkpoints_total_random
+logdir: logs_total_random
+prediction_logdir: predictions_total_random
+
+augmentation: False
+checkpoint_datamodule: dSprites
+datamodule: dSprites
+
+datamodule_path:
+   mnist_mnist_m:
+     totalRandom: True
+     mnist:
+       train_path: "../Datasets/mnist"
+     mnist_m:
+       train_path: "../Datasets/MNIST-M/mnistm/"
+       labels_path: "../Datasets/MNIST-M/labels.pkl"
+
+   syn_digits_svhn:
+     syn_digits:
+       train_path: "../Datasets/SyntheticDigits/archive/synthetic_digits/imgs_train"
+       val_path: "../Datasets/SyntheticDigits/archive/synthetic_digits/imgs_valid"
+     svhn:
+       data_path: "../Datasets/SVHN/"
+
+   svhn_mnist:
+     mnist:
+       train_path: "../Datasets/mnist"
+
+   fashion_mnist:
+     totalRandom: False
+     train_path: "../Datasets/fashion_mnist/"
+
+   cifar10:
+     totalRandom: True
+     data_path: "../Datasets/CIFAR10/"
+
+   dSprites:
+     data_path: "../Datasets/dSprites/"
+
+   officehome:
+     train_name: Real World #Clipart, Product, Real World, Art
+     data_path: "../Datasets/OfficeHomeDataset/"
+###### TRAINING CONFIG
+
+model: AE2
+
+restore_from_checkpoint: False
+Train: True
+Test: True
+
+p: [1.0]
+
+epochs: 10
+early_stopping_patience: 8
+batch_size: 256
+lr: 1e-3
+pooling: False
+kld_weight: 0.0025
+####### MODEL CONFIG
+
+hidden_dims: [32, 64, 128]
+kernel_sizes: [3, 3, 3]
+strides: [1, 1, 1] #[ 1, 1, 1, 1, 1]
+
+input_size: 32
+input_channels: 1
+latent_space_size: 512

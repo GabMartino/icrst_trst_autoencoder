@@ -1,0 +1,12 @@
+
+
+p_to_analyse: ["0.0", "0.2", "0.4", "0.6", "0.8", "1.0"]
+
+prediction_folder: ./predictions
+model: "AE2"
+
+prediction_dataset: "Mnist"
+
+prediction_filename: prediction.pkl
+
+

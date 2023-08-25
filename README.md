@@ -1,1 +1,1 @@
-# icrst_trst_autoencoder
+# AutoencodersAreWrong
