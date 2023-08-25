@@ -2,7 +2,8 @@
 
 Here we propose a different way to train a Classical Autoencoder.
 
-The MNIST dataset class is modified sampling another observation from the same class distribution with a probability $$p$$
+The MNIST dataset class is modified sampling another observation from the same class distribution with a probability $p$.
+
 
 ```python
 
