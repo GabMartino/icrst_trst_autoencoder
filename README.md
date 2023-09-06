@@ -41,7 +41,7 @@ class RandomMNISTDataset(Dataset):
 
         return image, out, label
 ```
-##References
+## References
 ```
 @misc{martino2023using,
       title={Are We Using Autoencoders in a Wrong Way?}, 
