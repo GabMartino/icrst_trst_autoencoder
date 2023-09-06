@@ -41,3 +41,14 @@ class RandomMNISTDataset(Dataset):
 
         return image, out, label
 ```
+##References
+```
+@misc{martino2023using,
+      title={Are We Using Autoencoders in a Wrong Way?}, 
+      author={Gabriele Martino and Davide Moroni and Massimo Martinelli},
+      year={2023},
+      eprint={2309.01532},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
